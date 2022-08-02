@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    
+    // Added 
+    "jsx": "react-jsx", // Transform JSX into React code
+    "module": "ESNext", // Generate modern JS modules for our library
+    "declaration": true, // Generate a .d.ts file for our library
+    "declarationDir": "types", // Put the .d.ts file in a folder called types
+    "sourceMap": true, // Mapping JS code back to its TS file origins for debugging
+    "outDir": "dist", // Put the generated JS in a folder called dist
+    "moduleResolution": "Node", // Follow node.js rules for finding modules, This is used for imports
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export, Assumes default exports if none are created manually
+    "emitDeclarationOnly": true, // Only generate the .d.ts file, don't generate the JS file, rollup will do that for us
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
